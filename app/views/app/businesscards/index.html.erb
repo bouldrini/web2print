@@ -1,0 +1,28 @@
+<h2> Los Geht's </h2>
+<h3> Wählen Sie eine Vorlage aus : </h3>
+
+<div class='template_area'>
+
+</div>
+
+<div class='businesscard' id='template' style='display: none; height:200px; width: 300px; outline:2px solid black; float: left; margin-left:20px; margin-top: 20px'>
+</div>
+
+<script type="text/javascript">
+jQuery(function($){
+  var COLORS = [{hex: '#000000', name: "black"}, {hex:'#FF0000', name: "red"}, {hex:'#32CD32', name: "green"}, {hex: '#EE7600',name: 'orange'}, {hex: '#8B4513',name: 'brown' }, {hex: '#1874CD',name: 'blue'}, {hex:'#8A2BE2', name: 'purple'},{hex: '#D02090',name: 'pink'}, {hex: '#00F5FF', name: 'mint'}];
+
+  $.each(COLORS, function(index, color){
+    var template = $('.businesscard[id="template"]').clone();
+    template.attr('id', color.hex);
+    template.css('background-color', color.hex);
+    template.appendTo($('.template_area'));
+    template.show();
+  });
+
+  $(document).on('click', '.businesscard', function(){
+    var color = $(this).attr('id');
+    alert('your template got the color: ' + color);
+  });
+})
+</script>

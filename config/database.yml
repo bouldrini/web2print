@@ -1,0 +1,12 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: web2print_development
+  pool: 5
+  min_messages: error
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: web2print_test
+  pool: 5

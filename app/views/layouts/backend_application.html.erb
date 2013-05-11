@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Web2print</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "app/application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render partial: 'layouts/menubar' %>
+<div class='container'>
+  <%= yield %>
+</div>
+
+</body>
+</html>
